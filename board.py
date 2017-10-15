@@ -147,6 +147,10 @@ class sg_state:
         return self.board < other.board
         
 class same_game(Problem):
+    
+    def __init__(self, board):
+        self.initial = sg_state(board);
+    
     def actions(self, state):
         ret_actions = board_find_groups(state.board)
         return [item for item in ret_actions if len(item)>1]
