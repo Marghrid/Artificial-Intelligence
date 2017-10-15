@@ -1,3 +1,5 @@
+from search import *
+
 # TAI color
 # sem cor = 0
 # com cor > 0
@@ -22,35 +24,34 @@ def print_board (board):
         for cell in line:
             print(cell, end =' ')
         print()
-        
-def board_find_groups(board):
-    return [(0,0)]
-
-def pos_key(pos):
-    return pos[0]
 
 def board_remove_group(board, group):
+    # 1. Fazer uma cópia do tabuleiro
+    # 2. Colocar a 0 todas as posições do do grupo
+    # 3. Compacatação vertical
+    # 4. Compactação horizontal
     l = []
-    i=0; j=0;
+    i = 0
+    j = 0
     for line in board:
-        l.append([]);
+        l.append([])
         for cell in line:
-            l[i].append(cell);
-            j+=1;
-        i+=1;
+            l[i].append(cell)
+            j+=1
+        i+=1
         
    
     #compacts each column vertically
     #and eliminates a column if empty (compacts horizontally)
-    missing_columns = 0;
-    j=0;
+    missing_columns = 0
+    j = 0
     while j<len(board[0]):
-        advance = 0;
+        advance = 0
        
         if(j+missing_columns<=len(board[0])-1):         
             for i in reversed(range(0, len(board))):
                 while (i-advance,j+missing_columns) in group:
-                    advance += 1;
+                    advance += 1
                            
                 #note: we should stop loop when we see zero, because balls 
                 # don't float
@@ -76,22 +77,22 @@ def board_find_groups(board):
     found = []
     i = 0
     for line in board:
-        found.append([]);
+        found.append([])
         for cell in line:
-            found[i].append(0);
+            found[i].append(0)
             
-        i+=1;
+        i+=1
         
     for i in range(0, len(board)):
         for j in range(0, len(board[0])):
             
             if color(board[i][j]):
-                group = board_get_group(make_pos(i,j), board, found);
-                if (not group is None) and len(group)>1:
-                    groups.append(group);
+                group = board_get_group(make_pos(i,j), board, found)
+                if (not group is None):
+                    groups.append(group)
                 
                 
-    return groups;
+    return groups
 
 def board_get_group(pos, board, found):
     i = pos_l(pos)
@@ -105,35 +106,60 @@ def board_get_group(pos, board, found):
         
         if i<len(board)-1:
             if board[i][j] == board[i+1][j]:
-                g = board_get_group(make_pos(i+1,j), board, found);
+                g = board_get_group(make_pos(i+1,j), board, found)
                 if not g is None:
-                    group+=g;
+                    group+=g
                     
         if i>0:
             if board[i][j] == board[i-1][j]:
-                g = board_get_group(make_pos(i-1,j), board, found);
+                g = board_get_group(make_pos(i-1,j), board, found)
                 if not g is None:
-                    group+=g;
+                    group+=g
                     
         if j<len(board[0])-1:
             if board[i][j] == board[i][j+1]:
-                g = board_get_group(make_pos(i,j+1), board, found);
+                g = board_get_group(make_pos(i,j+1), board, found)
                 if not g is None:
-                    group+=g;
+                    group+=g
                     
         if j>0:
             if board[i][j] == board[i][j-1]:
-                g = board_get_group(make_pos(i,j-1), board, found);
+                g = board_get_group(make_pos(i,j-1), board, found)
                 if not g is None:
-                    group+=g;
+                    group+=g
                     
         
-        return group;
-            
+        return group
 
-    
-    
-    
+def board_get_num_groups(board):
+    colorsSet = set();
+    for line in board:
+        for cell in line:
+            if not no_color(cell):
+                colorsSet.add(cell)
+    return len(colorsSet)
 
+class sg_state:
+    def __init__(self, board):
+        self.board = board
+    
+    def __lt__(self, other):
+        return self.board < other.board
         
+class same_game(Problem):
+    def actions(self, state):
+        ret_actions = board_find_groups(state.board)
+        return [item for item in ret_actions if len(item)>1]
     
+    def result(self, state, action):
+        return sg_state(board_remove_group(state.board, action))
+    
+    def goal_test(self, state):
+        #Board is empty if the lower left slot is empty
+        pos = make_pos(len(state.board)-1, 0)
+        return no_color(pos)
+    
+    def value(self, state):
+        return board_get_num_groups(state.board)
+
+            
