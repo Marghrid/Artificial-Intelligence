@@ -26,10 +26,10 @@ def print_board (board):
         print()
 
 def board_remove_group(board, group):
-    # 1. Fazer uma cópia do tabuleiro
-    # 2. Colocar a 0 todas as posições do do grupo
-    # 3. Compacatação vertical
-    # 4. Compactação horizontal
+    # 1. Fazer uma copia do tabuleiro
+    # 2. Colocar a 0 todas as posicoes do do grupo
+    # 3. Compacatacao vertical
+    # 4. Compactacao horizontal
     l = []
     i = 0
     j = 0
@@ -40,6 +40,7 @@ def board_remove_group(board, group):
             j+=1
         i+=1
         
+    
    
     #compacts each column vertically
     #and eliminates a column if empty (compacts horizontally)
@@ -50,7 +51,8 @@ def board_remove_group(board, group):
        
         if(j+missing_columns<=len(board[0])-1):         
             for i in reversed(range(0, len(board))):
-                while (i-advance,j+missing_columns) in group:
+                while (i-advance,j+missing_columns) in group or \
+                      [i-advance,j+missing_columns] in group:
                     advance += 1
                            
                 #note: we should stop loop when we see zero, because balls 
@@ -58,10 +60,10 @@ def board_remove_group(board, group):
                 if (advance > 0 or missing_columns>0) and (i-advance)>=0:
                     l[i][j] = l[i-advance][j+missing_columns]
                 elif (i-advance)<0:
-                    l[i][j] = 0   
+                    l[i][j] = 0  
             
             #empty column case
-            if l[len(board)-1][j+missing_columns] == 0:
+            if l[len(board)-1][j] == 0:
                 missing_columns+=1
                 j-=1
         else:
@@ -132,12 +134,13 @@ def board_get_group(pos, board, found):
         return group
 
 def board_get_num_groups(board):
-    colorsSet = set();
+    count = 0;
     for line in board:
         for cell in line:
             if not no_color(cell):
-                colorsSet.add(cell)
-    return len(colorsSet)
+                count+=1
+                
+    return count
 
 class sg_state:
     def __init__(self, board):
@@ -161,9 +164,9 @@ class same_game(Problem):
     def goal_test(self, state):
         #Board is empty if the lower left slot is empty
         pos = make_pos(len(state.board)-1, 0)
-        return no_color(pos)
+        return no_color(state.board[pos_l(pos)][pos_c(pos)])
     
-    def value(self, state):
-        return board_get_num_groups(state.board)
+    def h(self, node):
+        return len(board_find_groups(node.state.board))
 
             
