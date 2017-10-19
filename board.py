@@ -51,7 +51,7 @@ def board_remove_group(board, group):
        
         if(j+missing_columns <= len(board[0])-1):         
             for i in reversed(range(0, len(board))):
-                while (i-advance,j+missing_columns) in group or \
+                while make_pos(i-advance,j+missing_columns) in group or \
                       [i-advance,j+missing_columns] in group:
                     advance+=1
                            

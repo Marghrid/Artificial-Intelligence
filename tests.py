@@ -8,6 +8,12 @@ tests = [
 		[[1,1,5,3],[5,3,5,3],[1,2,5,4],[5,2,1,4],[5,3,5,1],[5,3,4,4],[5,5,2,5],[1,1,3,1],[1,2,1,3],[3,3,5,5]]
 ];
 
+def greedy_search(problem, h=None):
+    """f(n) = h(n)"""
+    h = memoize(h or problem.h, 'h')
+    return best_first_graph_search(problem, h)
+
+
 i = 0
 for test in tests:
 	i+=1
@@ -18,43 +24,25 @@ for test in tests:
 	print_board(test)
 	print()
 
-	print("DFS1:")
+	print("DFS:")
 	problem = InstrumentedProblem(same_game(test))
 	initial_time = perf_counter()
 	depth_first_tree_search(problem)
 	final_time = perf_counter() - initial_time
-	print("time: ", end="")
+	print("Tempo: ", end="")
 	print(final_time)
-	print("Estados expandidos: ", end="")
-	print(problem.succs)
-	print("Nós gerados: ", end = "")
-	print(problem.states)
-	print()
-
-	print("DFS2:")
-	problem = InstrumentedProblem(same_game(test))
-	initial_time = perf_counter()
-	depth_first_graph_search(problem)
-	final_time = perf_counter() - initial_time
-	print("time: ", end="")
-	print(final_time)
-	print("Nós expandidos: ", end="")
-	print(problem.succs)
-	print("Nós gerados: ", end = "")
+	print("Nós: ", end = "")
 	print(problem.states)
 	print()
 
 	print("Greedy search:")
 	problem = InstrumentedProblem(same_game(test))
 	initial_time = perf_counter()
-	greedy_best_first_graph_search(problem, problem.h)
+	greedy_search(problem, problem.h)
 	final_time = perf_counter() - initial_time
-	print("time: ", end="")
+	print("Tempo: ", end="")
 	print(final_time)
-	print("Estados expandidos: ", end="")
-	print(problem.succs)
-	print("Nós gerados: ", end = "")
-	print(problem.states)
+	print("Nós: ", end = "")
 	print()
 
 	print("A*:")
@@ -62,10 +50,7 @@ for test in tests:
 	initial_time = perf_counter()
 	astar_search(problem)
 	final_time = perf_counter() - initial_time
-	print("time: ", end="")
+	print("Tempo: ", end="")
 	print(final_time)
-	print("Estados expandidos: ", end="")
-	print(problem.succs)
-	print("Nós gerados: ", end = "")
 	print(problem.states)
 	print()
