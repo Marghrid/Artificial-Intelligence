@@ -46,25 +46,25 @@ def board_remove_group(board, group):
     #and eliminates a column if empty (compacts horizontally)
     missing_columns = 0
     j = 0
-    while j<len(board[0]):
+    while j < len(board[0]):
         advance = 0
        
-        if(j+missing_columns<=len(board[0])-1):         
+        if(j+missing_columns <= len(board[0])-1):         
             for i in reversed(range(0, len(board))):
                 while (i-advance,j+missing_columns) in group or \
                       [i-advance,j+missing_columns] in group:
-                    advance += 1
+                    advance+=1
                            
                 #note: we should stop loop when we see zero, because balls 
                 # don't float
-                if (advance > 0 or missing_columns>0) and (i-advance)>=0:
+                if (advance > 0 or missing_columns > 0) and (i - advance) >= 0:
                     l[i][j] = l[i-advance][j+missing_columns]
-                elif (i-advance)<0:
+                elif (i-advance) < 0:
                     l[i][j] = 0  
             
             #empty column case
             if l[len(board)-1][j] == 0:
-                missing_columns+=1
+                missing_columns += 1
                 j-=1
         else:
             for i in range(0, len(board)):
