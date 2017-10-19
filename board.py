@@ -168,5 +168,3 @@ class same_game(Problem):
     
     def h(self, node):
         return len(board_find_groups(node.state.board))
-
-            
