@@ -143,11 +143,14 @@ def board_get_num_groups(board):
     return count
 
 class sg_state:
+    state_id = 0
     def __init__(self, board):
         self.board = board
+        self.id = sg_state.state_id
+        sg_state.state_id += 1
     
     def __lt__(self, other):
-        return self.board < other.board
+        return self.id < other.id
         
 class same_game(Problem):
     
