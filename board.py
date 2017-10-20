@@ -1,3 +1,5 @@
+#Grupo 3: 80832 Margarida Ferreira, 81805 Duarte David
+
 from search import *
 
 # TAI color
@@ -40,8 +42,6 @@ def board_remove_group(board, group):
             j+=1
         i+=1
         
-    
-   
     #compacts each column vertically
     #and eliminates a column if empty (compacts horizontally)
     missing_columns = 0
@@ -55,8 +55,6 @@ def board_remove_group(board, group):
                       [i-advance,j+missing_columns] in group:
                     advance+=1
                            
-                #note: we should stop loop when we see zero, because balls 
-                # don't float
                 if (advance > 0 or missing_columns > 0) and (i - advance) >= 0:
                     l[i][j] = l[i-advance][j+missing_columns]
                 elif (i-advance) < 0:
@@ -142,6 +140,16 @@ def board_get_num_groups(board):
                 
     return count
 
+def board_get_num_colors(board):
+    colors = set()
+    for line in board:
+        for cell in line:
+            if not no_color(cell):
+                set.add(cell)
+    return len(colors)
+
+
+
 class sg_state:
     state_id = 0
     def __init__(self, board):
@@ -165,7 +173,7 @@ class same_game(Problem):
         return sg_state(board_remove_group(state.board, action))
     
     def goal_test(self, state):
-        #Board is empty if the lower left slot is empty
+        # Board is empty if the lower left slot is empty
         pos = make_pos(len(state.board)-1, 0)
         return no_color(state.board[pos_l(pos)][pos_c(pos)])
     
