@@ -14,7 +14,7 @@ for ii, test in enumerate(["regress.npy", "regress2.npy"]):
     print("Testing " + test)
     
     X,Y,Xp,Yp = np.load(test)
-       
+    
     reg = regsol.mytraining(X,Y)
     
     Ypred = regsol.myprediction(Xp,reg)
@@ -32,6 +32,7 @@ for ii, test in enumerate(["regress.npy", "regress2.npy"]):
     plt.plot(Xp,Ypred,'m',label='linregres1')
     plt.legend( loc = 1 )
     
+    #NOSSO:
     plt.show()
 
 

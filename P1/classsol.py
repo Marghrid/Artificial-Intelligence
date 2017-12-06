@@ -26,9 +26,9 @@ def features(X):
     for x in range(0,len(X)):
         F[x,0] = len(X[x])
         F[x,1] = ord(X[x][0])
-        F[x,2] = ord(X[x][-1])
-        F[x,3] = vowel_ratio(X)
-        F[x,4] = numbers_ratio(X)
+        F[x,2] = ord(X[x][1])
+        F[x,3] = ord(X[x][-1])
+        F[x,4] = vowel_ratio(X)
     return F     
 
 def mytraining(f,Y):

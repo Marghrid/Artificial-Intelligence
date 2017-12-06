@@ -22,14 +22,12 @@ for test in ["wordsclass.npy", "wordsclass2.npy"]:
     f = classsol.features(X)    
     
     clf = classsol.mytraining(f,Y)
-      
+
     Ypred = classsol.myprediction(f, clf)
-     
-     
+   
     #ISTO É NOSSO
     print(np.sum(Y^Ypred)/len(X))
     ###
-    
     
     if (np.sum(Y^Ypred)/len(X))<.05:
         print("Erro bastante baixo. PERFECT!\n")
