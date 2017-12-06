@@ -7,7 +7,7 @@ import classsol
 
 #load input data
 words = []
-with open("words.txt") as file:
+with open("words.txt", encoding='latin-1') as file:
     for line in file: 
         line = line.split(' ') #or some other preprocessing
         words.append(line) #storing everything in memory!
@@ -24,7 +24,13 @@ for test in ["wordsclass.npy", "wordsclass2.npy"]:
     clf = classsol.mytraining(f,Y)
       
     Ypred = classsol.myprediction(f, clf)
-        
+     
+     
+    #ISTO É NOSSO
+    print(np.sum(Y^Ypred)/len(X))
+    ###
+    
+    
     if (np.sum(Y^Ypred)/len(X))<.05:
         print("Erro bastante baixo. PERFECT!\n")
     elif (np.sum(Y^Ypred)/len(X))<.3:    
