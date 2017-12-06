@@ -10,7 +10,7 @@ from matplotlib.colors import ListedColormap
 import regsol
 
 tres = [.3, 800]    
-for ii,test in enumerate(["regress.npy", "regress2.npy"]):
+for ii, test in enumerate(["regress.npy", "regress2.npy"]):
     print("Testing " + test)
     
     X,Y,Xp,Yp = np.load(test)
@@ -19,6 +19,9 @@ for ii,test in enumerate(["regress.npy", "regress2.npy"]):
     
     Ypred = regsol.myprediction(Xp,reg)
     
+    #NOSSO:
+    print(-cross_val_score( reg, X, Y, cv = 5, scoring = 'neg_mean_squared_error').mean())
+    ##
     if -cross_val_score( reg, X, Y, cv = 5, scoring = 'neg_mean_squared_error').mean() < tres[ii]:
         print("Erro dentro dos limites de tolerância. OK\n")
     else:
@@ -28,5 +31,7 @@ for ii,test in enumerate(["regress.npy", "regress2.npy"]):
     plt.plot(X,Y,'k+',label='datatrain')
     plt.plot(Xp,Ypred,'m',label='linregres1')
     plt.legend( loc = 1 )
+    
+    plt.show()
 
 
