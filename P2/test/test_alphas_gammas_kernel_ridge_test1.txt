@@ -1,0 +1,168 @@
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 4.33394523067
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.386565519164
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.373986656346
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 1.76181087354
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 3.57899224767
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 6.35750908783
+
+Testing ridge  regress.npy , with alpha =  0.0001  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 9.81424935309
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 3.98983554099
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.144161546114
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.102871934281
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 0.0952775975376
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 0.231684729611
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 0.655981424673
+
+Testing ridge  regress.npy , with alpha =  0.001  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 1.33269582678
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 2.10404778793
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.343505900319
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.10331059874
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 0.120051168287
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 0.149632727784
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 0.238127593713
+
+Testing ridge  regress.npy , with alpha =  0.01  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 0.458705186861
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 1.45611622488
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.670592836984
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.232812163582
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 0.247347191849
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 0.299020022814
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 0.400017455441
+
+Testing ridge  regress.npy , with alpha =  0.1  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 0.620619872163
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 1.28140756674
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.778186795704
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.348040858308
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 0.351790146407
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 0.402125534893
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 0.516194748535
+
+Testing ridge  regress.npy , with alpha =  0.2  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 0.763688825383
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.01
+Erro dentro dos limites de tolerância. OK
+Score: 1.20595965464
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.05
+Erro dentro dos limites de tolerância. OK
+Score: 0.850783171477
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.1
+Erro dentro dos limites de tolerância. OK
+Score: 0.444572814974
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.12
+Erro dentro dos limites de tolerância. OK
+Score: 0.44269132753
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.15
+Erro dentro dos limites de tolerância. OK
+Score: 0.490903491803
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.2
+Erro dentro dos limites de tolerância. OK
+Score: 0.61199458463
+
+Testing ridge  regress.npy , with alpha =  0.3  and gamma =  0.3
+Erro dentro dos limites de tolerância. OK
+Score: 0.87932498506
+

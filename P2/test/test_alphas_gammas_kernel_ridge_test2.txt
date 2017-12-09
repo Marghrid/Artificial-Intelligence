@@ -1,0 +1,135 @@
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.001
+Score: 2428.91655362
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.005
+Score: 25.3982196857
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.01
+Score: 75.4373605897
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.05
+Score: 139.113933376
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.1
+Score: 152.893517831
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.12
+Score: 184.630218016
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.15
+Score: 200.70651622
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.2
+Score: 436.472495342
+
+Testing ridge  regress2.npy , with alpha =  1e-05  and gamma =  0.3
+Score: 1009.01240183
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.001
+Score: 2988.85211635
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.005
+Score: 371.580424372
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.01
+Score: 75.7919770447
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.05
+Score: 154.920367267
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.1
+Score: 308.072823715
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.12
+Score: 329.009057695
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.15
+Score: 434.723391123
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.2
+Score: 532.451928292
+
+Testing ridge  regress2.npy , with alpha =  0.0001  and gamma =  0.3
+Score: 910.890327251
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.001
+Score: 1621.04228702
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.005
+Score: 2190.31701243
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.01
+Score: 582.056427295
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.05
+Score: 428.437089581
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.1
+Score: 547.943374213
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.12
+Score: 622.170182951
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.15
+Score: 655.133096812
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.2
+Score: 799.09456567
+
+Testing ridge  regress2.npy , with alpha =  0.001  and gamma =  0.3
+Score: 1043.59662989
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.001
+Score: 979.015362865
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.005
+Score: 2194.96068857
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.01
+Score: 2232.32049813
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.05
+Score: 706.735723964
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.1
+Score: 811.083463416
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.12
+Score: 852.977456386
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.15
+Score: 971.638820785
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.2
+Score: 1103.5862952
+
+Testing ridge  regress2.npy , with alpha =  0.01  and gamma =  0.3
+Score: 1305.52412282
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.001
+Score: 1303.74637276
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.005
+Score: 1273.56730785
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.01
+Score: 1769.60715346
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.05
+Score: 1235.22319729
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.1
+Score: 1264.74000448
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.12
+Score: 1320.19034052
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.15
+Score: 1367.03472158
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.2
+Score: 1445.04874332
+
+Testing ridge  regress2.npy , with alpha =  0.1  and gamma =  0.3
+Score: 1601.8942953
+
