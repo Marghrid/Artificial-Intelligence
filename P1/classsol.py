@@ -38,17 +38,13 @@ def features(X):
     return F     
 
 def mytraining(f,Y):
-    
-    #KNeighborsClassifier
-    n_neighbors = 3
+    return mytrainingaux(f, Y, 3)
+
+def mytrainingaux(f,Y,par):
+    n_neighbors = par
     weights = 'distance'
     clfKNNC2 = neighbors.KNeighborsClassifier(n_neighbors, weights=weights)
     clf = clfKNNC2.fit(f, Y)    
-   
-    return clf
-    
-def mytrainingaux(f,Y,par):
-    
     return clf
 
 def myprediction(f, clf):

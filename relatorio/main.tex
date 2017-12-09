@@ -1,0 +1,129 @@
+\documentclass[twocolumn, 9pt]{extarticle}
+\usepackage[utf8]{inputenc}              % Tipos de caracteres
+\usepackage[portuges]{babel}             % Português
+\usepackage[a4paper, top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm]{geometry}  % Tipo de papel
+\usepackage{color}                       % Para tratamento da cor
+\usepackage{graphicx}                    % Para a imagem
+\usepackage{amsmath}                     % Para as matematiquices
+\usepackage{amssymb}
+\setlength{\columnsep}{.7cm}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{comment}
+\usepackage{titling}
+
+\renewenvironment{abstract}
+ {\small
+  \begin{center}
+  \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \list{}{
+    \setlength{\leftmargin}{0cm}%
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+
+\renewcommand{\abstractname}{Resumo}
+\setlength{\droptitle}{-30pt}
+
+\title{\bf Relatório do Segundo Projeto de IA}
+\author{
+	80832 Margarida Ferreira
+    \and
+	81805 Duarte David
+    }
+\date{\small Dezembro de 2017}
+
+
+\begin{document} 
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+    \begin{abstract}
+	\normalsize Testam-se vários métodos de aprendizagem sobre diferentes conjuntos de dados. São realizadas uma classificação sobre um conjunto de palavras, duas regressões sobre conjuntos de pontos 2D e uma aprendizagem por reforço sobre um conjunto de trajetórias sobre um grafo com uma topologia 1D. Os resultados obtidos revelaram-se todos abaixo dos limiares máximos permitidos.\par
+    \ \\ 
+	\end{abstract}
+  \end{@twocolumnfalse}
+]
+
+\section{Introdução}
+O objetivo do presente trabalho é realizar diversos tipos de aprendizagem automática sobre diversos conjuntos de pontos, de forma a perceber, a um nível introdutório, que técnicas aplicar para diferentes tipos de dados. \par
+
+\section{P1 - Métodos de Classificação}
+\subsection{O \textit{Dataset}}
+O conjunto de dados consiste num conjunto de palavras, cada uma classificada como \textit{True} ou \textit{False}.\par
+
+\subsection{Seleção das \textit{Features}}
+Seja $\Sigma$ o alfabeto onde as palavras estão definidas, e o espaço das \textit{features} $\mathbb{R}^5$ (existem 5 \textit{features} e cada \textit{feature} pertence a $\mathbb{R}$, a extração das \textit{features} é definida por uma função ${f\colon \Sigma ^{*} \setminus \{ \epsilon \} \to \mathbb{R}^5}$, tal que ${f(w) = (x_1, x_2, x_3, x_4, x_5)}$, onde:
+\begin{itemize}
+\itemsep -0.3em
+\item $x_1$ é o comprimento de $w$.
+\item $x_2$ é a codificação numérica da primeira letra de $w$.
+\item $x_3$ é a codificação numérica da segunda letra de  $w$.
+\item $x_4$ é a codificação numérica da penúltima letra $w$.
+\item $x_5$ é a codificação numérica da última letra de $w$.
+\end{itemize}
+
+A escolha das \textit{features} necessita de satisfazer o requisito de que palavras similares se encontram próximas (por uma dada norma) no espaço das \textit{features}. A similaridade das palavras pode ser morfológica ou semântica. Apenas se faz uma pequena tentativa de respeitar o primeiro caso, uma vez que sequer começar a pensar no segundo se tornaria demasiado complexo. Para tentar respeitar a similaridade morfológica, olhamos para as primeiras e últimas letras de cada palavra (palavras semelhantes podem ter o mesmo radical - ``agir" e ``agente", ou podem acabar da mesma maneira (``inteligente" e ``agente"),  indicando semelhança gramatical). É também considerado o tamanho das palavras.\par
+
+Foram consideradas outras características das palavras, como por exemplo o número de vogais, ou a primeira/última letra ser vogal, mas não produziram resultados melhores nem cumpriam os critérios mencionados acima.\par
+
+\subsection{Método de Classificação}
+
+Utilizando um classificador \textbf{k-vizinhos}, com 3 vizinhos, com as \textit{features} descritas acima, consegue obter-se um \textbf{erro de 0.0}. Também foi testado um classificador de \textbf{árvore de decisão}, mas os resultados ficaram aquém do \textbf{k-vizinhos}, obtendo um erro de $\approx$ 0.017.\par
+
+\section{P2 - Métodos de Regressão}
+O objeto de estudo desta parte é a aplicação de métodos de regressão à aprendizagem de funções cujo conjunto de partida e de chegada é $\mathbb{R}$. As funções em causa assemelham-se a funções trigonométricas (ou funções trigonométricas inversas) com ruído.\par
+
+\subsection{Escolha e Avaliação dos Modelos}
+Tentou aprender-se a função por 3 modelos diferentes de regressão: \textbf{Regressão Linear}, \textbf{Regressão de Cume com Núcleo} e \textbf{Regressão de Árvore de Decisão}.\par
+
+Os modelos foram avaliados através de \textbf{validação cruzada} para determinar aquele que se ajusta melhor aos dados. Destes três, apenas se observou resultados aceitáveis com a \textbf{Regressão de Cume com Núcleo}.\par
+
+Ajustaram-se dois parâmetros do modelo, $\alpha$ e $\gamma$, correspondentes à largura da penalização e à largura da função de núcleo (uma função de base radial), respetivamente, até se obterem os parâmetros que melhoram a pontuação obtida pela validação cruzada.\par
+
+Para $\alpha = 0.001$ e $\gamma = 0.1$, observou-se uma pontuação de $0.1028$ para a primeira regressão e $547.94$, sendo este o modelo treinado no ficheiro submetido. Também se averiguou que, na segunda regressão, um $\alpha$ arbitrariamente pequeno é aquele que melhora os resultados (uma vez que o \textit{dataset} em questão é muito bem comportado - tem pouco ruído -, não é necessário incluir uma forte penalização pelo sobre-ajustamento). Contudo, valores de $\alpha$ muito pequenos causam o sobre-ajustamento. Os resultados obtidos com estes valores podem ser visualizados na figura 1. As tabelas 1 e 2 mostram as variações das pontuações em função da alteração dos parâmetros.\par
+\input{table1}
+\input{table2}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=200pt]{Regressoes1.png}
+	\par\noindent {\scriptsize a)}
+	\\ \
+	\includegraphics[width=200pt]{Regressoes2.png}
+	\par\noindent {\scriptsize b)}
+	\caption{\footnotesize Visualização dos dados obtidos para cada uma das regressões, para o primeiro \textit{dataset} (a) e para o segundo (b). KR1 é a Regressão de Cume com Núcleo com $\alpha = 0.00001$ e $\gamma = 0.005$. KR2 é a Regressão de Cume com Núcleo com $\alpha = 0.001$ e $\gamma = 0.1$}
+\end{figure}
+
+\section{P3 - Aprendizagem Por Reforço}
+O objetivo desta parte é utilizar aprendizagem por reforço para aprender o movimento de um agente num ambiente com 7 estados.\par
+
+
+\subsection{Política Escolhida}
+Uma política é uma função $\pi: S \times A \to [0, 1]$ tal que $\pi(s,a) = P(a_t = a | s_t = s)$, ou seja, é a probabilidade de um agente escolher uma acção com base no estado atual.
+A política que escolhemos utiliza o valor da função $Q$ para calcular a probabilidade: é a exponencial de $Q \cdot \eta $ (normalizada tal que $\Sigma_{i=1}^n \pi(s_j,a_i) = 1$, para todo o estado $s_j$), onde $\eta$ é um parâmetro que tem como efeito a separação das probabilidades de cada estado.\par
+
+\subsection{O Ambiente do Agente}
+Por inspeção das transições de estados possíveis no primeiro ambiente, obtemos o diagrama de transições que se mostra na figura 2 para o primeiro ambiente. \par
+\input{transition_graph1}
+Cada estado tem no máximo dois estados vizinhos, pelo que se pode pensar num ambiente uni-dimensional para o agente (como por exemplo um braço robótico que apenas rode em um eixo, com travões que o impeçam de dar a volta). Note-se também que a ação 1 aplicada ao estado 5 pode levar ao estado 6 ou a permanecer no estado 5. Conclui-se que o ambiente é estocástico (imagine-se um obstáculo que por vezes impede o braço robótico de rodar).\par
+\input{transition_graph2}
+Na figura 3 mostra-se o diagrama das transições no segundo ambiente, obtido da mesma forma que para o primeiro.\par
+Agora, quando é efetuada a ação 0 no estado 6, o estado seguinte é o estado 1. Pode continuar a representar um braço robótico, desta vez sem um dos travões: quando roda mais um pouco (ação 0) após estar orientado para cima (estado 6), ``cai'' para trás e apenas para de rodar ao atingir o estado 1.\par
+
+\subsection{Recompensa}
+
+Em ambos os ambientes, existe uma recompensa de 1 para os estados 0 e 6 (estados objetivo).\par
+Esta recompensa será propagada para a função Q ao longo das iterações sucessivas de modo a que o agente aprenda a escolher transições que o levem a estes estados o mais depressa possível. Isto reflete-se na função da política, cuja probabilidade de escolher uma ação cresce exponencialmente com o valor Q associado a essa transição.\par
+
+\subsection{Resultado}
+Foi aplicado o algoritmo \textit{Q-learning} para diferentes valores de $\alpha$ e $\gamma$. Com valores de $\alpha$ elevados, o algoritmo consegue convergir rapidamente, pelo que se conclui que os ambientes são pouco estocásticos. Para valores $\alpha$ menores, o algoritmo obtém valores com erro inferior, a custo de mais iterações. Para contornar este problema, decrementa-se o valor de $\alpha$ a cada iteração do algoritmo.\par
+Assim, foram escolhidos os valores ${\alpha_{inicial} = 0.5}$ e ${\gamma = 0.9}$ e usado para cada iteração $i$ o valor ${\alpha = \frac{5}{5+i} \cdot \alpha_{inicial}}$, por apresentarem os erros mais baixos ($\approx 0.09$ para ambos os ambientes).\par
+Com estes valores, ao ser colocado no estado 5 do primeiro ambiente, o agente exerce a ação 0, apesar do elemento estocástico da mesma, com o intuito de se colocar no estado 6, no qual permanece (recebendo uma recompensa de 1 em cada \textit{time step}. No segundo ambiente, como não é possível permanecer no estado 6, o agente desloca-se com a intenção de alcançar o estado 0, através dos estados 6 e 1\par
+Por outro lado, ao ser colocado no estado 3, o agente opta por se deslocar para o estado 0, em ambos os ambientes, e manter-se lá. Esta preferência pelo estado 0 em detrimento do estado 6 (ambos à mesma distância do 3) resulta da tendência do agente a evitar movimentos incertos, como aquele com que se depararia ao tentar deslocar-se do estado 5 para o 6.\par
+
+\section{Conclusão}
+Foram realizados com sucesso diversos tipos de aprendizagem automática. Observou-se as implicações que os parâmetros de cada um dos métodos têm e cumpriu-se o objetivo de perceber como analisar os dados, tomando especial cuidado para evitar que os métodos se sobre-ajustem aos dados.\par
+\end{document}
