@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 16 20:31:54 2017
+# # # # # # # # # # # # # # # #
+#  Grupo 3:                   #
+#    80832 Margarida Ferreira #
+#    81805 Duarte David       #
+# # # # # # # # # # # # # # # #
 
-@author: mlopes
-"""
 import numpy as np
 
 def Q2pol(Q, eta=5):

@@ -1,3 +1,9 @@
+# # # # # # # # # # # # # # # #
+#  Grupo 3:                   #
+#    80832 Margarida Ferreira #
+#    81805 Duarte David       #
+# # # # # # # # # # # # # # # #
+
 import numpy as np
 from sklearn.externals import joblib
 from RL import *
