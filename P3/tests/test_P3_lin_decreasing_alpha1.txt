@@ -1,0 +1,72 @@
+Testing different values of gamma and alpha for Q learning with linearly decreasing alpha
+Increasing function: alpha = (50/(50+i))*self.alpha
+(Printing only OK resuls)
+
+Testing fmdp1.pkl with alpha = 0.1 with gamma = 0.9
+Iterações:  54
+
+Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.9
+Iterações:  38
+
+Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.9
+Iterações:  59
+
+Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.9
+Iterações:  77
+
+Testing fmdp1.pkl with alpha = 0.5 with gamma = 0.9
+Iterações:  92
+
+Testing fmdp1.pkl with alpha = 0.6 with gamma = 0.9
+Iterações:  107
+
+Testing fmdp1.pkl with alpha = 0.7 with gamma = 0.9
+Iterações:  121
+
+Testing fmdp1.pkl with alpha = 0.8 with gamma = 0.9
+Iterações:  135
+
+Testing fmdp1.pkl with alpha = 0.9 with gamma = 0.9
+Iterações:  147
+
+Testing fmdp1.pkl with alpha = 0.99 with gamma = 0.9
+Iterações:  159
+
+Testing fmdp1.pkl with alpha = 1 with gamma = 0.9
+Iterações:  160
+
+
+Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.9
+Iterações:  34
+
+Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.9
+Iterações:  21
+
+Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.9
+Iterações:  38
+
+Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.9
+Iterações:  51
+
+Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.9
+Iterações:  6
+
+Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.9
+Iterações:  5
+
+Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.9
+Iterações:  4
+
+Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.9
+Iterações:  4
+
+Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.9
+Iterações:  3
+
+Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.9
+Iterações:  3
+
+Testing fmdp2.pkl with alpha = 1 with gamma = 0.9
+Iterações:  3
+
+

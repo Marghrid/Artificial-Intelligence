@@ -1,6 +1,31 @@
 from sklearn.externals import joblib
-lista = [[0,0,0,0,0,0,0], [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
+
 outralista = []
+
+print("TRAJ 1:")
+for coisa in joblib.load('traj1.pkl'):
+    temp_list = []
+    for coisinha in coisa:
+        temp_list += [(int(coisinha))]
+    if temp_list not in outralista:
+        outralista += [temp_list]
+
+for i in outralista:
+    print (i)
+
+outralista = []
+
+print("TRAJ 2:")
+for coisa in joblib.load('traj2.pkl'):
+    temp_list = []
+    for coisinha in coisa:
+        temp_list += [(int(coisinha))]
+    if temp_list not in outralista:
+        outralista += [temp_list]
+for i in outralista:
+    print (i)
+
+#lista = [[0,0,0,0,0,0,0], [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
 
 #for coisa in joblib.load('traj1.pkl'):
 #    print(coisa)
@@ -36,25 +61,3 @@ outralista = []
 #print("para 6")
 #print(count_bons)
 
-print("TRAJ 1:")
-for coisa in joblib.load('traj1.pkl'):
-    temp_list = []
-    for coisinha in coisa:
-        temp_list += [(int(coisinha))]
-    if temp_list not in outralista:
-        outralista += [temp_list]
-
-for i in outralista:
-    print (i)
-
-outralista = []
-
-print("TRAJ 2:")
-for coisa in joblib.load('traj2.pkl'):
-    temp_list = []
-    for coisinha in coisa:
-        temp_list += [(int(coisinha))]
-    if temp_list not in outralista:
-        outralista += [temp_list]
-for i in outralista:
-    print (i)

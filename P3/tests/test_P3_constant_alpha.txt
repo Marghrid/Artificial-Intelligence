@@ -1,0 +1,65 @@
+Testing different values of gamma and alpha for Q learning with constant alpha
+(Printing only OK resuls)
+
+Testing fmdp1.pkl with alpha = 0.1 with gamma = 0.9
+Iterações: 40
+Erro: 0.0937320435247
+
+Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.9
+Iterações: 22
+Erro: 0.114961051624
+
+Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.9
+Iterações: 16
+Erro: 0.192048563491
+
+Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.9
+Iterações: 12
+Erro: 0.286876214947
+
+
+Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.9
+Iterações: 27
+Erro: 0.0443787581766
+
+Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.9
+Iterações: 14
+Erro: 0.0901433754537
+
+Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.9
+Iterações: 10
+Erro: 0.130021660727
+
+Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.9
+Iterações: 8
+Erro: 0.154317702452
+
+Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.9
+Iterações: 6
+Erro: 0.166824033293
+
+Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.9
+Iterações: 5
+Erro: 0.173280371807
+
+Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.9
+Iterações: 4
+Erro: 0.176625712318
+
+Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.9
+Iterações: 4
+Erro: 0.17809316679
+
+Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.9
+Iterações: 3
+Erro: 0.17848935979
+
+Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.9
+Iterações: 3
+Erro: 0.178520363413
+
+Testing fmdp2.pkl with alpha = 1 with gamma = 0.9
+Iterações: 3
+Erro: 0.178520388528
+
+

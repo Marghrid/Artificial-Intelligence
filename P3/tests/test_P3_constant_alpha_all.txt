@@ -1,0 +1,335 @@
+Testing different values of gamma and alpha for Q learning with constant alpha
+(Printing all resuls)
+
+Testing fmdp1.pkl with alpha = 0.1 with gamma = 0.99
+Iterações: 387
+Recompensa: 0.729
+Erro: 335.978174432
+
+Testing fmdp1.pkl with alpha = 0.1 with gamma = 0.9
+Iterações: 40
+Recompensa: 0.729
+Erro: 0.0937320435247
+
+Testing fmdp1.pkl with alpha = 0.1 with gamma = 0.85
+Iterações: 27
+Recompensa: 0.729
+Erro: 12.1756734106
+
+Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.99
+Iterações: 210
+Recompensa: 0.729
+Erro: 336.022952144
+
+Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.9
+Iterações: 22
+Recompensa: 0.729
+Erro: 0.114961051624
+
+Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.85
+Iterações: 15
+Recompensa: 0.729
+Erro: 12.1604744855
+
+Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.99
+Iterações: 146
+Recompensa: 0.729
+Erro: 336.036642572
+
+Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.9
+Iterações: 16
+Recompensa: 0.729
+Erro: 0.192048563491
+
+Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.85
+Iterações: 11
+Recompensa: 0.729
+Erro: 12.1607861591
+
+Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.99
+Iterações: 113
+Recompensa: 0.729
+Erro: 336.033072757
+
+Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.9
+Iterações: 12
+Recompensa: 0.729
+Erro: 0.286876214947
+
+Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.85
+Iterações: 8
+Recompensa: 0.729
+Erro: 12.1739774064
+
+Testing fmdp1.pkl with alpha = 0.5 with gamma = 0.99
+Iterações: 93
+Recompensa: 0.729
+Erro: 336.007931522
+
+Testing fmdp1.pkl with alpha = 0.5 with gamma = 0.9
+Iterações: 10
+Recompensa: 0.729
+Erro: 0.391570501406
+
+Testing fmdp1.pkl with alpha = 0.5 with gamma = 0.85
+Iterações: 7
+Recompensa: 0.729
+Erro: 12.2024112473
+
+Testing fmdp1.pkl with alpha = 0.6 with gamma = 0.99
+Iterações: 78
+Recompensa: 0.729
+Erro: 335.962820973
+
+Testing fmdp1.pkl with alpha = 0.6 with gamma = 0.9
+Iterações: 9
+Recompensa: 0.729
+Erro: 0.505325284641
+
+Testing fmdp1.pkl with alpha = 0.6 with gamma = 0.85
+Iterações: 6
+Recompensa: 0.729
+Erro: 12.24440151
+
+Testing fmdp1.pkl with alpha = 0.7 with gamma = 0.99
+Iterações: 67
+Recompensa: 0.729
+Erro: 335.906194134
+
+Testing fmdp1.pkl with alpha = 0.7 with gamma = 0.9
+Iterações: 8
+Recompensa: 0.729
+Erro: 0.630420982894
+
+Testing fmdp1.pkl with alpha = 0.7 with gamma = 0.85
+Iterações: 6
+Recompensa: 0.729
+Erro: 12.29572601
+
+Testing fmdp1.pkl with alpha = 0.8 with gamma = 0.99
+Iterações: 60
+Recompensa: 0.729
+Erro: 335.842586524
+
+Testing fmdp1.pkl with alpha = 0.8 with gamma = 0.9
+Iterações: 7
+Recompensa: 0.729
+Erro: 0.768666692273
+
+Testing fmdp1.pkl with alpha = 0.8 with gamma = 0.85
+Iterações: 5
+Recompensa: 0.729
+Erro: 12.3538393325
+
+Testing fmdp1.pkl with alpha = 0.9 with gamma = 0.99
+Iterações: 53
+Recompensa: 0.729
+Erro: 335.771984155
+
+Testing fmdp1.pkl with alpha = 0.9 with gamma = 0.9
+Iterações: 6
+Recompensa: 0.729
+Erro: 0.920848429177
+
+Testing fmdp1.pkl with alpha = 0.9 with gamma = 0.85
+Iterações: 5
+Recompensa: 0.729
+Erro: 12.4178361886
+
+Testing fmdp1.pkl with alpha = 0.99 with gamma = 0.99
+Iterações: 49
+Recompensa: 0.729
+Erro: 335.704726211
+
+Testing fmdp1.pkl with alpha = 0.99 with gamma = 0.9
+Iterações: 6
+Recompensa: 0.729
+Erro: 1.07002893593
+
+Testing fmdp1.pkl with alpha = 0.99 with gamma = 0.85
+Iterações: 4
+Recompensa: 0.729
+Erro: 12.4805707885
+
+Testing fmdp1.pkl with alpha = 1 with gamma = 0.99
+Iterações: 48
+Recompensa: 0.729
+Erro: 335.696663182
+
+Testing fmdp1.pkl with alpha = 1 with gamma = 0.9
+Iterações: 6
+Recompensa: 0.0
+Erro: 1.08732834172
+
+Testing fmdp1.pkl with alpha = 1 with gamma = 0.85
+Iterações: 4
+Recompensa: 0.729
+Erro: 12.4878503463
+
+
+Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.99
+Iterações: 158
+Recompensa: 0.729
+Erro: 335.722290904
+
+Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.9
+Iterações: 27
+Recompensa: 0.729
+Erro: 0.0443787581766
+
+Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.85
+Iterações: 25
+Recompensa: 0.729
+Erro: 11.9390780656
+
+Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.99
+Iterações: 85
+Recompensa: 0.729
+Erro: 335.767441827
+
+Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.9
+Iterações: 14
+Recompensa: 0.729
+Erro: 0.0901433754537
+
+Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.85
+Iterações: 13
+Recompensa: 0.729
+Erro: 11.916030917
+
+Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.99
+Iterações: 59
+Recompensa: 0.729
+Erro: 335.804947829
+
+Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.9
+Iterações: 10
+Recompensa: 0.729
+Erro: 0.130021660727
+
+Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.85
+Iterações: 9
+Recompensa: 0.729
+Erro: 11.895086769
+
+Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.99
+Iterações: 45
+Recompensa: 0.729
+Erro: 335.827758858
+
+Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.9
+Iterações: 8
+Recompensa: 0.729
+Erro: 0.154317702452
+
+Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.85
+Iterações: 7
+Recompensa: 0.729
+Erro: 11.8819175121
+
+Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.99
+Iterações: 37
+Recompensa: 0.729
+Erro: 335.840324203
+
+Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.9
+Iterações: 6
+Recompensa: 0.729
+Erro: 0.166824033293
+
+Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.85
+Iterações: 6
+Recompensa: 0.729
+Erro: 11.8748640854
+
+Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.99
+Iterações: 32
+Recompensa: 0.729
+Erro: 335.84700447
+
+Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.9
+Iterações: 5
+Recompensa: 0.729
+Erro: 0.173280371807
+
+Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.85
+Iterações: 5
+Recompensa: 0.729
+Erro: 11.8712691743
+
+Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.99
+Iterações: 27
+Recompensa: 0.729
+Erro: 335.84954263
+
+Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.9
+Iterações: 4
+Recompensa: 0.729
+Erro: 0.176625712318
+
+Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.85
+Iterações: 4
+Recompensa: 0.729
+Erro: 11.8695054366
+
+Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.99
+Iterações: 24
+Recompensa: 0.729
+Erro: 335.851042685
+
+Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.9
+Iterações: 4
+Recompensa: 0.729
+Erro: 0.17809316679
+
+Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.85
+Iterações: 3
+Recompensa: 0.729
+Erro: 11.8687692115
+
+Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.99
+Iterações: 22
+Recompensa: 0.729
+Erro: 335.851819487
+
+Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.9
+Iterações: 3
+Recompensa: 0.729
+Erro: 0.17848935979
+
+Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.85
+Iterações: 3
+Recompensa: 0.729
+Erro: 11.8685733103
+
+Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.99
+Iterações: 20
+Recompensa: 0.729
+Erro: 335.851885569
+
+Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.9
+Iterações: 3
+Recompensa: 0.729
+Erro: 0.178520363413
+
+Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.85
+Iterações: 3
+Recompensa: 0.729
+Erro: 11.8685585518
+
+Testing fmdp2.pkl with alpha = 1 with gamma = 0.99
+Iterações: 20
+Recompensa: 0.729
+Erro: 335.851995491
+
+Testing fmdp2.pkl with alpha = 1 with gamma = 0.9
+Iterações: 3
+Recompensa: 0.729
+Erro: 0.178520388528
+
+Testing fmdp2.pkl with alpha = 1 with gamma = 0.85
+Iterações: 3
+Recompensa: 0.729
+Erro: 11.8685585502
+
+

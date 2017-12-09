@@ -7,9 +7,10 @@ import RLsol
 for test in [('fmdp1.pkl','traj1.pkl'), ('fmdp2.pkl','traj2.pkl')]:
     
     print("Testing " + test[0])    
-    # funcoes auxiliarres
+    # funcoes auxiliares
     fmdp = joblib.load(test[0]) 
-    # ficheiro com a trajectório de treino             
+
+    # ficheiro com a trajectória de treino             
     traj = joblib.load(test[1]) 
     
     qlearn = RLsol.myRL(7,2,0.9)
