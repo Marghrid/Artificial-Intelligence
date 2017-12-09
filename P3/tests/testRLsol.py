@@ -3,7 +3,9 @@ from sklearn.externals import joblib
 from RL import *
 import RLsol
 
-print("Testing different values of gamma and alpha for Q learning with constant alpha")
+#print("Testing different values of gamma and alpha for Q learning with constant alpha")
+print("Testing different values of gamma and alpha for Q learning with linearly decreasing alpha")
+print("Decreasing function: alpha = (5/(5+i))*self.alpha")
 print("(Printing all resuls)")
 print("")
 
@@ -39,7 +41,7 @@ for test in [('fmdp1.pkl','traj1.pkl'), ('fmdp2.pkl','traj2.pkl')]:
             #else:
             #    print("Recompensa obtida abaixo do previsto. FAILED")
 
-            if np.linalg.norm(Q-fmdp.Q)<.3 and J>.7:
+            if np.linalg.norm(Q-fmdp.Q)<.2 and J>.7:
                 print("Testing", test[0], "with alpha =", alpha, "with gamma =", gamma)
                 print("Iterações:", i)
                 print("Recompensa:", J)

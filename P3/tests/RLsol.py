@@ -23,14 +23,13 @@ class myRL:
         err = 1
         i = 0
         alpha= self.alpha
-        while err>=1e-3:
-            #i+=1
-            #alpha = (5/(5+i))*self.alpha
+        while err>=1e-2:
+            i+=1
+            alpha = (5/(5+i))*self.alpha
             #alpha*=.8
             for tt in trace:
                 #[x, a, y, r]
                 nQ[int(tt[0]),int(tt[1])] = nQ[int(tt[0]),int(tt[1])] + alpha * (tt[3] + self.gamma * max(nQ[int(tt[2]),:]) - nQ[int(tt[0]),int(tt[1])])
             err = np.linalg.norm(self.Q-nQ)
-            self.Q = np.copy(nQ)
-       
+            self.Q = np.copy(nQ)      
         return self.Q, i

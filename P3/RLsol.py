@@ -20,10 +20,11 @@ class myRL:
         self.Q = np.zeros((self.nS,self.nA))
         nQ = np.zeros((self.nS,self.nA))
         err = 1
-        alpha = 0.1
+        initial_alpha = 0.5
         i = 0
         while err>=1e-2:
             i+=1
+            alpha = (5/(5+i))*initial_alpha
             for tt in trace:
                 #[x, a, y, r]
                 nQ[int(tt[0]),int(tt[1])] = nQ[int(tt[0]),int(tt[1])] + alpha * (tt[3] + self.gamma * max(nQ[int(tt[2]),:]) - nQ[int(tt[0]),int(tt[1])])

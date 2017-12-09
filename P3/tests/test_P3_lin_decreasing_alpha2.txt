@@ -1,66 +1,97 @@
 Testing different values of gamma and alpha for Q learning with linearly decreasing alpha
-Increasing function: alpha = (5/(5+i))*self.alpha
-(Printing only OK resuls)
-
-Testing fmdp1.pkl with alpha = 0.2 with gamma = 0.9
-Iterações:  94
+Decreasing function: alpha = (5/(5+i))*self.alpha
+(Printing all resuls)
 
 Testing fmdp1.pkl with alpha = 0.3 with gamma = 0.9
-Iterações:  47
+Iterações: 26
+Recompensa: 0.729
+Erro: 0.141510688584
 
 Testing fmdp1.pkl with alpha = 0.4 with gamma = 0.9
-Iterações:  32
+Iterações: 18
+Recompensa: 0.729
+Erro: 0.108573475512
 
 Testing fmdp1.pkl with alpha = 0.5 with gamma = 0.9
-Iterações:  33
+Iterações: 14
+Recompensa: 0.729
+Erro: 0.094318135811
 
 Testing fmdp1.pkl with alpha = 0.6 with gamma = 0.9
-Iterações:  38
+Iterações: 13
+Recompensa: 0.729
+Erro: 0.0985635437878
 
 Testing fmdp1.pkl with alpha = 0.7 with gamma = 0.9
-Iterações:  42
-
-Testing fmdp1.pkl with alpha = 0.8 with gamma = 0.9
-Iterações:  46
+Iterações: 13
+Recompensa: 0.729
+Erro: 0.111706851991
 
 Testing fmdp1.pkl with alpha = 0.9 with gamma = 0.9
-Iterações:  50
+Iterações: 16
+Recompensa: 0.729
+Erro: 0.124123349853
 
 Testing fmdp1.pkl with alpha = 0.99 with gamma = 0.9
-Iterações:  53
+Iterações: 17
+Recompensa: 0.729
+Erro: 0.131537974154
+
+Testing fmdp1.pkl with alpha = 1 with gamma = 0.9
+Iterações: 17
+Recompensa: 0.729
+Erro: 0.133162855164
 
 
-Testing fmdp2.pkl with alpha = 0.1 with gamma = 0.9
-Iterações:  181
 
 Testing fmdp2.pkl with alpha = 0.2 with gamma = 0.9
-Iterações:  47
+Iterações: 27
+Recompensa: 0.729
+Erro: 0.0766511643076
 
 Testing fmdp2.pkl with alpha = 0.3 with gamma = 0.9
-Iterações:  25
+Iterações: 15
+Recompensa: 0.729
+Erro: 0.0411633720657
 
 Testing fmdp2.pkl with alpha = 0.4 with gamma = 0.9
-Iterações:  26
+Iterações: 10
+Recompensa: 0.729
+Erro: 0.0602564728384
 
 Testing fmdp2.pkl with alpha = 0.5 with gamma = 0.9
-Iterações:  30
+Iterações: 8
+Recompensa: 0.729
+Erro: 0.0874985214452
 
 Testing fmdp2.pkl with alpha = 0.6 with gamma = 0.9
-Iterações:  33
+Iterações: 6
+Recompensa: 0.729
+Erro: 0.120667922361
 
 Testing fmdp2.pkl with alpha = 0.7 with gamma = 0.9
-Iterações:  36
+Iterações: 5
+Recompensa: 0.729
+Erro: 0.144084949298
 
 Testing fmdp2.pkl with alpha = 0.8 with gamma = 0.9
-Iterações:  39
+Iterações: 4
+Recompensa: 0.729
+Erro: 0.160719393576
 
 Testing fmdp2.pkl with alpha = 0.9 with gamma = 0.9
-Iterações:  41
+Iterações: 4
+Recompensa: 0.729
+Erro: 0.166953448679
 
 Testing fmdp2.pkl with alpha = 0.99 with gamma = 0.9
-Iterações:  44
+Iterações: 3
+Recompensa: 0.729
+Erro: 0.17393095
 
 Testing fmdp2.pkl with alpha = 1 with gamma = 0.9
-Iterações:  44
+Iterações: 3
+Recompensa: 0.729
+Erro: 0.174213100141
 
 
