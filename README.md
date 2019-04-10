@@ -9,3 +9,9 @@ Programa em Python que resolve diferentes puzzles de uma variante do jogo _Same 
 
 ### Proj2:
 Aplicação de diversos tipos de técnicas de aprendizagem - classificação, regressão e por reforço - em diferentes conjuntos de dados.
+
+Autores:
+- [Duarte David](https://github.com/drcd1)
+- [Margarida Ferreira](https://github.com/Marghrid)
+
+Dezembro 2017
